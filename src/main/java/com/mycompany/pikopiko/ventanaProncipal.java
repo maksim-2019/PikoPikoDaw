@@ -17,6 +17,7 @@ public class ventanaProncipal extends javax.swing.JFrame {
      * Creates new form ventanaProncipal
      */
     ImageIcon image;
+
     public ventanaProncipal() {
         initComponents();
         this.setBounds(200, 200, 600, 500);
@@ -48,6 +49,20 @@ public class ventanaProncipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
+        jugar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jugarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jugarMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jugarMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jugarMouseReleased(evt);
+            }
+        });
         jugar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jugarActionPerformed(evt);
@@ -72,12 +87,32 @@ public class ventanaProncipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
-       System.exit(0);
+        System.exit(0);
     }//GEN-LAST:event_salirActionPerformed
 
     private void jugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jugarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jugarActionPerformed
+
+    private void jugarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jugarMouseEntered
+        image = new ImageIcon("res/Jugar2.png");
+        jugar.setIcon(image);
+    }//GEN-LAST:event_jugarMouseEntered
+
+    private void jugarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jugarMouseExited
+        image = new ImageIcon("res/Jugar1.png");
+        jugar.setIcon(image);
+    }//GEN-LAST:event_jugarMouseExited
+
+    private void jugarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jugarMousePressed
+        image = new ImageIcon("res/Jugar3.png");
+        jugar.setIcon(image);
+    }//GEN-LAST:event_jugarMousePressed
+
+    private void jugarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jugarMouseReleased
+        image = new ImageIcon("res/Jugar1.png");
+        jugar.setIcon(image);
+    }//GEN-LAST:event_jugarMouseReleased
 
     /**
      * @param args the command line arguments
