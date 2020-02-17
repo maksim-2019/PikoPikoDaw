@@ -71,6 +71,20 @@ public class ventanaProncipal extends javax.swing.JFrame {
         getContentPane().add(jugar);
         jugar.setBounds(341, 101, 180, 45);
 
+        salir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                salirMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                salirMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                salirMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                salirMouseReleased(evt);
+            }
+        });
         salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 salirActionPerformed(evt);
@@ -113,6 +127,26 @@ public class ventanaProncipal extends javax.swing.JFrame {
         image = new ImageIcon("res/Jugar1.png");
         jugar.setIcon(image);
     }//GEN-LAST:event_jugarMouseReleased
+
+    private void salirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMouseEntered
+        image = new ImageIcon("res/Salir2.png");
+        salir.setIcon(image);
+    }//GEN-LAST:event_salirMouseEntered
+
+    private void salirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMouseExited
+        image = new ImageIcon("res/Salir1.png");
+        salir.setIcon(image);
+    }//GEN-LAST:event_salirMouseExited
+
+    private void salirMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMousePressed
+        image = new ImageIcon("res/Salir3.png");
+        salir.setIcon(image);
+    }//GEN-LAST:event_salirMousePressed
+
+    private void salirMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMouseReleased
+        image = new ImageIcon("res/Salir1.png");
+        salir.setIcon(image);
+    }//GEN-LAST:event_salirMouseReleased
 
     /**
      * @param args the command line arguments
