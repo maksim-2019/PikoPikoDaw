@@ -5,6 +5,8 @@
  */
 package com.mycompany.pikopiko;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 
 /**
@@ -17,10 +19,14 @@ public class ventanaProncipal extends javax.swing.JFrame {
      * Creates new form ventanaProncipal
      */
     ImageIcon image;
+    Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+    int height = pantalla.height;
+    int width = pantalla.width;
 
     public ventanaProncipal() {
         initComponents();
-        this.setBounds(200, 200, 600, 500);
+        this.setBounds((height/2), (width/2), 600, 500);
+        setLocationRelativeTo(null);
         this.setResizable(false);
         image = new ImageIcon("res/Jugar1.png");
         jugar.setIcon(image);
@@ -30,6 +36,7 @@ public class ventanaProncipal extends javax.swing.JFrame {
         logo.setIcon(image);
         image = new ImageIcon("res/Fondo.png");
         fondo.setIcon(image);
+        this.setVisible(true);
     }
 
     /**
@@ -47,6 +54,7 @@ public class ventanaProncipal extends javax.swing.JFrame {
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(null);
 
         jugar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -80,9 +88,6 @@ public class ventanaProncipal extends javax.swing.JFrame {
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 salirMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                salirMouseReleased(evt);
             }
         });
         salir.addActionListener(new java.awt.event.ActionListener() {
@@ -142,11 +147,6 @@ public class ventanaProncipal extends javax.swing.JFrame {
         image = new ImageIcon("res/Salir3.png");
         salir.setIcon(image);
     }//GEN-LAST:event_salirMousePressed
-
-    private void salirMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMouseReleased
-        image = new ImageIcon("res/Salir1.png");
-        salir.setIcon(image);
-    }//GEN-LAST:event_salirMouseReleased
 
     /**
      * @param args the command line arguments
