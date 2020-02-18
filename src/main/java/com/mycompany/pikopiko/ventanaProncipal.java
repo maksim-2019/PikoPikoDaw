@@ -7,7 +7,9 @@ package com.mycompany.pikopiko;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -18,7 +20,7 @@ public class ventanaProncipal extends javax.swing.JFrame {
     /**
      * Creates new form ventanaProncipal
      */
-    ImageIcon image;
+    ImageIcon image, icono;// Inicialización de objetos ImageIcon
     Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
     int height = pantalla.height;
     int width = pantalla.width;
@@ -37,6 +39,9 @@ public class ventanaProncipal extends javax.swing.JFrame {
         image = new ImageIcon("res/Fondo.png");
         fondo.setIcon(image);
         this.setVisible(true);
+        
+        //Declaración icono
+        icono = new ImageIcon("res/minilogo.png");
     }
 
     /**
@@ -110,7 +115,10 @@ public class ventanaProncipal extends javax.swing.JFrame {
     }//GEN-LAST:event_salirActionPerformed
 
     private void jugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jugarActionPerformed
-        // TODO add your handling code here:
+        //Array de jugadores
+        Object[] jugadores = {2, 3, 4};
+        //JOptionPane de lista deplegable con icono
+        Object opcion = JOptionPane.showInputDialog(null,"Elige la cantidad de jugadores", "Jugadores",JOptionPane.QUESTION_MESSAGE,icono,jugadores, jugadores[0]);
     }//GEN-LAST:event_jugarActionPerformed
 
     private void jugarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jugarMouseEntered
