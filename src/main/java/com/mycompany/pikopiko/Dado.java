@@ -5,6 +5,8 @@
  */
 package com.mycompany.pikopiko;
 
+import java.util.Random;
+
 /**
  *
  * @author alex
@@ -16,10 +18,21 @@ public class Dado {
     numCara.CARA4, numCara.CARA5, numCara.CARA6
     };
     private boolean disponible;
+    private Random r = new Random();
     
     public Dado() {
         this.arrayDado = arrayDado;
         this.disponible = disponible;
+    }
+    
+    /* Este metodo saca un enum aleatoriamente de entre los especificados
+       en los atributos
+    */
+    public CaraDado mostrarDado(){
+        int resultado;
+        resultado = r.nextInt(5);
+//        System.out.println(arrayDado[resultado]);
+        return arrayDado[resultado];
     }
 
     public CaraDado getNumCara() {
@@ -40,6 +53,11 @@ public class Dado {
 
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
+    }
+
+    @Override
+    public String toString() {
+        return "Dado{" + "numCara=" + numCara + ", arrayDado=" + arrayDado + ", disponible=" + disponible + ", r=" + r + '}';
     }
     
     
