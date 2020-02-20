@@ -26,6 +26,7 @@ public class VentanaJuego extends javax.swing.JFrame {
     int width = pantalla.width;
     JLabel[] fichas;
     JToggleButton[] dados;
+    TurnoJugadores turno;
 
     public VentanaJuego() {
         initComponents();
