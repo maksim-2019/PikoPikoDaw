@@ -6,6 +6,7 @@
 package com.mycompany.pikopiko;
 
 import java.util.Random;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -16,6 +17,8 @@ public class Dado {
     private CaraDado numCara;
     private CaraDado[] arrayDado;
     private boolean disponible;
+    private int caraSeleccionada;
+    
     private Random r = new Random();
 
     public Dado() {
@@ -26,11 +29,19 @@ public class Dado {
     /* Este metodo saca un enum aleatoriamente de entre los especificados
        en los atributos
      */
-    public CaraDado mostrarDado() {
-        int resultado;
-        resultado = r.nextInt(5);
+    public void mostrarDado() {
+        
+        caraSeleccionada = r.nextInt(6);
 //        System.out.println(arrayDado[resultado]);
-        return arrayDado[resultado];
+//        return arrayDado[caraSeleccionada];
+    }
+    
+    public int valorTirada(){
+        return arrayDado[caraSeleccionada].getValor();
+    }
+    
+    public ImageIcon imagenDado(){
+        return arrayDado[caraSeleccionada].getImagen();
     }
 
 ////    public void comprobardado() {
@@ -41,6 +52,8 @@ public class Dado {
 //            resultado = r.nextInt(5);
 //        }
 //    }
+    
+    
 
     public CaraDado getNumCara() {
         return numCara;
