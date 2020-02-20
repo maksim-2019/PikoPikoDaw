@@ -115,10 +115,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_salirActionPerformed
 
     private void jugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jugarActionPerformed
-        //Array de jugadores
-        Object[] jugadores = {2, 3, 4};
-        //JOptionPane de lista deplegable con icono
-        Object opcion = JOptionPane.showInputDialog(null,"Elige la cantidad de jugadores", "Jugadores",JOptionPane.QUESTION_MESSAGE,icono,jugadores, jugadores[0]);
+        // Array de jugadores
+        Integer[] jugadores = {2, 3, 4};
+        // JOptionPane de lista deplegable con icono
+        Integer numJugadores = (int)JOptionPane.showInputDialog(null,"Elige la cantidad de jugadores", "Jugadores",JOptionPane.QUESTION_MESSAGE,icono,jugadores, jugadores[0]);
+        Jugador[] listaJugadores = new Jugador[numJugadores];// Creación de la lista de jugadores
+        
+        // Bucle para rellenar la lista de jugadores con los nombres de los jugadores
+        for (int i = 0; i < numJugadores; i++) {
+        listaJugadores[i] = new Jugador(JOptionPane.showInputDialog(null, "¿Cómo te llamas?"));
+        }
     }//GEN-LAST:event_jugarActionPerformed
 
     private void jugarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jugarMouseEntered

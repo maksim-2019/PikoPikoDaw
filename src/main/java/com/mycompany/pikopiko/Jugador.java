@@ -9,19 +9,23 @@ package com.mycompany.pikopiko;
  *
  * @author jose
  */
-public class Usuario {
+public class Jugador {
     
     //Atributos
     private String nombre;
     
     //Constructor
-    public Usuario(String nombre) {
+    public Jugador(String nombre) {
         this.nombre = nombre;
     }
     
     //Getters
     public String getNombre() {
         return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
     
 }
