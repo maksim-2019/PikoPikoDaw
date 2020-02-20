@@ -12,28 +12,35 @@ import java.util.Random;
  * @author alex
  */
 public class Dado {
+
     private CaraDado numCara;
-    private CaraDado[] arrayDado = {
-    numCara.CARA1, numCara.CARA2, numCara.CARA3, 
-    numCara.CARA4, numCara.CARA5, numCara.CARA6
-    };
+    private CaraDado[] arrayDado;
     private boolean disponible;
     private Random r = new Random();
-    
+
     public Dado() {
-        this.arrayDado = arrayDado;
+        this.arrayDado = new CaraDado[]{numCara.CARA1, numCara.CARA2, numCara.CARA3, numCara.CARA4, numCara.CARA5, numCara.CARA6};
         this.disponible = disponible;
     }
-    
+
     /* Este metodo saca un enum aleatoriamente de entre los especificados
        en los atributos
-    */
-    public CaraDado mostrarDado(){
+     */
+    public CaraDado mostrarDado() {
         int resultado;
         resultado = r.nextInt(5);
 //        System.out.println(arrayDado[resultado]);
         return arrayDado[resultado];
     }
+
+////    public void comprobardado() {
+//        int resultado;
+//        if (this.disponible == false) {
+//            JOptionPane.showMessageDialog(null, "Este dado esta deshabilitado");
+//        } else {
+//            resultado = r.nextInt(5);
+//        }
+//    }
 
     public CaraDado getNumCara() {
         return numCara;
@@ -46,7 +53,6 @@ public class Dado {
 //    public void setArrayDado(CaraDado[] arrayDado) {
 //        this.arrayDado = arrayDado;
 //    }
-
     public boolean isDisponible() {
         return disponible;
     }
@@ -59,9 +65,5 @@ public class Dado {
     public String toString() {
         return "Dado{" + "numCara=" + numCara + ", arrayDado=" + arrayDado + ", disponible=" + disponible + ", r=" + r + '}';
     }
-    
-    
 
-  
-    
 }
