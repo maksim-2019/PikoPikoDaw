@@ -7,6 +7,7 @@ package com.mycompany.pikopiko;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.util.ArrayList;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -119,12 +120,18 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Integer[] jugadores = {2, 3, 4};
         // JOptionPane de lista deplegable con icono
         Integer numJugadores = (int)JOptionPane.showInputDialog(null,"Elige la cantidad de jugadores", "Jugadores",JOptionPane.QUESTION_MESSAGE,icono,jugadores, jugadores[0]);
-        Jugador[] listaJugadores = new Jugador[numJugadores];// Creación de la lista de jugadores
+        ArrayList<Jugador> listaJugadores = new ArrayList<Jugador>();// Creación de la lista de jugadores
         
         // Bucle para rellenar la lista de jugadores con los nombres de los jugadores
         for (int i = 0; i < numJugadores; i++) {
-        listaJugadores[i] = new Jugador(JOptionPane.showInputDialog(null, "¿Cómo te llamas?"));
+            String nombre = JOptionPane.showInputDialog(null, "¿Cómo te llamas?");
+            listaJugadores.add(i, new Jugador(nombre));
+            if(listaJugadores.get(i).getNombre()== null){
+                listaJugadores.get(i).setNombre("Gallina "+i);
+            }
+            System.out.println(listaJugadores.get(i).getNombre());
         }
+        VentanaJuego juego = new VentanaJuego(listaJugadores);
     }//GEN-LAST:event_jugarActionPerformed
 
     private void jugarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jugarMouseEntered
