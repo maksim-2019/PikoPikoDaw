@@ -23,16 +23,17 @@ public class Jugador {
     //Constructor
     public Jugador(String nombre) {
         this.nombre = nombre;
-        this.puntosAcumulados = puntosAcumulados;
-        this.arrayDado = arrayDado;
+        this.arrayDado = new Dado[8];
+        for (int i = 0; i < arrayDado.length; i++) {
+            arrayDado[i] = new Dado();
+        }
     }
 
     //Metodos
     public void tirarDados() {
-
-        arrayDado[0].mostrarDado();
-
-        
+        for (int i = 0; i < arrayDado.length; i++) {
+            System.out.println(arrayDado[i].mostrarDado());
+        }  
     }
 
     //Getters
@@ -53,16 +54,12 @@ public class Jugador {
 //    }
     @Override
     public String toString() {
-        return "Jugador{" + "nombre=" + nombre + '}';
+        return "Jugador = "+ nombre;
     }
     
     public static void main(String[] args) {
         Jugador p = new Jugador("e");
         p.tirarDados();
-        
-        for (int i = 0; i < p.arrayDado.length; i++) {
-            System.out.println(p.arrayDado[i]);
-        }
- 
+
     }
 }
