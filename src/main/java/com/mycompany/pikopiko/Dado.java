@@ -14,7 +14,6 @@ import javax.swing.ImageIcon;
  */
 public class Dado {
 
-    private CaraDado numCara;
     private CaraDado[] arrayDado;
     private boolean disponible;
     private int caraSeleccionada;
@@ -22,18 +21,19 @@ public class Dado {
     private Random r = new Random();
 
     public Dado() {
-        this.arrayDado = new CaraDado[]{numCara.CARA1, numCara.CARA2, numCara.CARA3, numCara.CARA4, numCara.CARA5, numCara.CARA6};
-        this.disponible = disponible;
+        this.arrayDado = new CaraDado[]{
+            CaraDado.CARA1, CaraDado.CARA2, 
+            CaraDado.CARA3, CaraDado.CARA4, 
+            CaraDado.CARA5, CaraDado.CARA6
+        };
+        this.disponible = true;
     }
 
     /* Este metodo saca un enum aleatoriamente de entre los especificados
        en los atributos
      */
     public int mostrarDado() {
-
         return caraSeleccionada = r.nextInt(6);
-//        System.out.println(arrayDado[resultado]);
-//        return arrayDado[caraSeleccionada];
     }
 
     public int valorTirada() {
@@ -52,9 +52,6 @@ public class Dado {
 //            resultado = r.nextInt(5);
 //        }
 //    }
-    public CaraDado getNumCara() {
-        return numCara;
-    }
 
     public CaraDado[] getArrayDado() {
         return arrayDado;
@@ -73,7 +70,7 @@ public class Dado {
 
     @Override
     public String toString() {
-        return "Dado{" + "numCara=" + numCara + ", arrayDado=" + arrayDado + ", disponible=" + disponible + ", r=" + r + '}';
+        return "Dado{" +  ", arrayDado=" + arrayDado + ", disponible=" + disponible + '}';
     }
 
     public static void main(String[] args) {
