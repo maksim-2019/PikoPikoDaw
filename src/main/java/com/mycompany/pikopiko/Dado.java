@@ -18,7 +18,7 @@ public class Dado {
     private CaraDado[] arrayDado;
     private boolean disponible;
     private int caraSeleccionada;
-    
+
     private Random r = new Random();
 
     public Dado() {
@@ -29,18 +29,18 @@ public class Dado {
     /* Este metodo saca un enum aleatoriamente de entre los especificados
        en los atributos
      */
-    public void mostrarDado() {
-        
-        caraSeleccionada = r.nextInt(6);
+    public int mostrarDado() {
+
+        return caraSeleccionada = r.nextInt(6);
 //        System.out.println(arrayDado[resultado]);
 //        return arrayDado[caraSeleccionada];
     }
-    
-    public int valorTirada(){
+
+    public int valorTirada() {
         return arrayDado[caraSeleccionada].getValor();
     }
-    
-    public ImageIcon imagenDado(){
+
+    public ImageIcon imagenDado() {
         return arrayDado[caraSeleccionada].getImagen();
     }
 
@@ -52,9 +52,6 @@ public class Dado {
 //            resultado = r.nextInt(5);
 //        }
 //    }
-    
-    
-
     public CaraDado getNumCara() {
         return numCara;
     }
@@ -77,6 +74,11 @@ public class Dado {
     @Override
     public String toString() {
         return "Dado{" + "numCara=" + numCara + ", arrayDado=" + arrayDado + ", disponible=" + disponible + ", r=" + r + '}';
+    }
+
+    public static void main(String[] args) {
+        Dado d = new Dado();
+        System.out.println(d.mostrarDado());
     }
 
 }
