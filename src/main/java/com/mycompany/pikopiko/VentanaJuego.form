@@ -24,9 +24,38 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="baner" alignment="1" max="32767" attributes="0"/>
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jScrollPane1" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="dado1" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="dado2" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="dado3" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="dado4" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="dado5" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="dado6" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="dado7" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="dado8" min="-2" pref="50" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="BotonBloq" alignment="1" min="-2" pref="141" max="-2" attributes="0"/>
+                          <Component id="Robar" alignment="1" min="-2" pref="141" max="-2" attributes="0"/>
+                          <Component id="botonDevo" alignment="1" min="-2" pref="141" max="-2" attributes="0"/>
+                          <Component id="Tirar" alignment="1" min="-2" pref="141" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
                   <Component id="jSeparator1" alignment="0" min="-2" pref="682" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -71,31 +100,8 @@
                           </Group>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jScrollPane1" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Component id="dado1" min="-2" pref="50" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="dado2" min="-2" pref="50" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="dado3" min="-2" pref="50" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="dado4" min="-2" pref="50" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="dado5" min="-2" pref="50" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="dado6" min="-2" pref="50" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="dado7" min="-2" pref="50" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="dado8" min="-2" pref="50" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
               </Group>
-              <EmptySpace pref="406" max="32767" attributes="0"/>
+              <EmptySpace pref="445" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -104,15 +110,15 @@
           <Group type="102" alignment="0" attributes="0">
               <Component id="baner" min="-2" pref="100" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ficha8" min="-2" pref="160" max="-2" attributes="0"/>
-                  <Component id="ficha7" min="-2" pref="160" max="-2" attributes="0"/>
-                  <Component id="ficha6" min="-2" pref="160" max="-2" attributes="0"/>
-                  <Component id="ficha5" min="-2" pref="160" max="-2" attributes="0"/>
-                  <Component id="ficha4" min="-2" pref="160" max="-2" attributes="0"/>
-                  <Component id="ficha3" min="-2" pref="160" max="-2" attributes="0"/>
-                  <Component id="ficha2" min="-2" pref="160" max="-2" attributes="0"/>
-                  <Component id="ficha1" min="-2" pref="160" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="ficha8" pref="160" max="32767" attributes="0"/>
+                  <Component id="ficha7" pref="160" max="32767" attributes="0"/>
+                  <Component id="ficha6" pref="160" max="32767" attributes="0"/>
+                  <Component id="ficha5" pref="160" max="32767" attributes="0"/>
+                  <Component id="ficha4" pref="160" max="32767" attributes="0"/>
+                  <Component id="ficha3" pref="160" max="32767" attributes="0"/>
+                  <Component id="ficha2" pref="160" max="32767" attributes="0"/>
+                  <Component id="ficha1" pref="160" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -127,7 +133,7 @@
               </Group>
               <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
               <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="dado1" min="-2" pref="50" max="-2" attributes="0"/>
                   <Component id="dado2" min="-2" pref="50" max="-2" attributes="0"/>
@@ -137,10 +143,20 @@
                   <Component id="dado6" min="-2" pref="50" max="-2" attributes="0"/>
                   <Component id="dado7" min="-2" pref="50" max="-2" attributes="0"/>
                   <Component id="dado8" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="Tirar" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="127" max="-2" attributes="0"/>
-              <EmptySpace pref="22" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jScrollPane1" min="-2" pref="127" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="BotonBloq" min="-2" pref="45" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="Robar" min="-2" pref="45" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="botonDevo" min="-2" pref="45" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="26" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -243,5 +259,25 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JButton" name="Tirar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tirar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="BotonBloq">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Bloquear"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Robar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Robar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="botonDevo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Devolver"/>
+      </Properties>
+    </Component>
   </SubComponents>
 </Form>

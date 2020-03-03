@@ -64,4 +64,8 @@ public class Jugador {
         p.tirarDados();
 
     }
+
+    public void setPuntosAcumulados(int puntosAcumulados) {
+        this.puntosAcumulados = puntosAcumulados;
+    }
 }
