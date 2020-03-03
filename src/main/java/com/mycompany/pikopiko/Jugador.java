@@ -14,22 +14,24 @@ import java.util.Random;
 public class Jugador {
 
     //Atributos
-    private String nombre;
-    private int puntosAcumulados;
-    private Dado[] arrayDado;
-
-    private Random r = new Random();
+    private String nombre; // nombre del jugador
+    private int puntosAcumulados; // puntos del jugador
+    private Dado[] arrayDado; // dados que el jugador tiene en juego
 
     //Constructor
     public Jugador(String nombre) {
         this.nombre = nombre;
+
+        // creacion del array de los dados (8) y un objeto dado
+        // por cada posicion del array, asi tenemos un array de dados
         this.arrayDado = new Dado[8];
         for (int i = 0; i < arrayDado.length; i++) {
             arrayDado[i] = new Dado();
         }
     }
 
-    ///Metodos
+    /////Metodos/////
+    // le da a cada dado del array un valor si solo si estan disponibles
     public void tirarDados() {
         for (int i = 0; i < arrayDado.length; i++) {
             if (arrayDado[i].isDisponible()) {
@@ -51,14 +53,12 @@ public class Jugador {
         return puntosAcumulados;
     }
 
-//    public void setPuntosAcumulados(int puntosAcumulados) {
-//        this.puntosAcumulados = puntosAcumulados;
-//    }
     @Override
     public String toString() {
         return "Jugador = " + nombre;
     }
 
+    // Main para probar la clase
     public static void main(String[] args) {
         Jugador p = new Jugador("e");
         p.tirarDados();
