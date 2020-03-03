@@ -28,6 +28,8 @@ public class VentanaJuego extends javax.swing.JFrame {
     private JLabel[] fichas;
     private JToggleButton[] dados;
     private TurnoJugadores turno;
+    
+    private Mensajes m = new Mensajes();
 
     public VentanaJuego(ArrayList<Jugador> listaJugadores) {
         // iniciamos la lista
@@ -55,7 +57,7 @@ public class VentanaJuego extends javax.swing.JFrame {
             image = new ImageIcon("res/dado.gif");
             dados[i].setIcon(image);
         }
-
+        
     }
 
     /**
@@ -94,7 +96,7 @@ public class VentanaJuego extends javax.swing.JFrame {
         dado7 = new javax.swing.JToggleButton();
         dado8 = new javax.swing.JToggleButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        textArea = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -148,10 +150,10 @@ public class VentanaJuego extends javax.swing.JFrame {
             }
         });
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        textArea.setEditable(false);
+        textArea.setColumns(20);
+        textArea.setRows(5);
+        jScrollPane1.setViewportView(textArea);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -329,6 +331,6 @@ public class VentanaJuego extends javax.swing.JFrame {
     private javax.swing.JLabel ficha9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea textArea;
     // End of variables declaration//GEN-END:variables
 }
