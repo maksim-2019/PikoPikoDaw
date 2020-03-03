@@ -132,6 +132,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             System.out.println(listaJugadores.get(i).getNombre());
         }
         VentanaJuego juego = new VentanaJuego(listaJugadores);
+        juego.setVisible(true);
     }//GEN-LAST:event_jugarActionPerformed
 
     private void jugarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jugarMouseEntered
