@@ -29,11 +29,13 @@ public class Jugador {
         }
     }
 
-    //Metodos
+    ///Metodos
     public void tirarDados() {
         for (int i = 0; i < arrayDado.length; i++) {
-            System.out.println(arrayDado[i].mostrarDado());
-        }  
+            if (arrayDado[i].isDisponible()) {
+                arrayDado[i].mostrarDado();
+            }
+        }
     }
 
     //Getters
@@ -54,9 +56,9 @@ public class Jugador {
 //    }
     @Override
     public String toString() {
-        return "Jugador = "+ nombre;
+        return "Jugador = " + nombre;
     }
-    
+
     public static void main(String[] args) {
         Jugador p = new Jugador("e");
         p.tirarDados();
