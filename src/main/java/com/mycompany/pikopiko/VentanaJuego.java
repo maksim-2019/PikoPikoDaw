@@ -21,16 +21,17 @@ public class VentanaJuego extends javax.swing.JFrame {
     /**
      * Creates new form VentanaJuego
      */
-    ImageIcon image, icono;// Inicialización de objetos ImageIcon
-    Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
-    int height = pantalla.height;
-    int width = pantalla.width;
-    JLabel[] fichas;
-    JToggleButton[] dados;
-    TurnoJugadores turno;
+    private ImageIcon image, icono;// Inicialización de objetos ImageIcon
+    private Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+    private int height = pantalla.height;
+    private int width = pantalla.width;
+    private JLabel[] fichas;
+    private JToggleButton[] dados;
+    private TurnoJugadores turno;
 
     public VentanaJuego(ArrayList<Jugador> listaJugadores) {
-        
+        // iniciamos la lista
+        this.turno = new TurnoJugadores(listaJugadores);
         initComponents();
         this.setBounds((height / 2), (width / 2), 1100, 700);
         setLocationRelativeTo(null);
