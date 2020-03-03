@@ -24,4 +24,16 @@ public class Mensajes {
     public void hola(JTextArea text){
         texto.setText("¡Bienvenido al Piko Piko!");
     }
+    
+    public void dadoBloqueado(JTextArea text){
+        text.setText("¡Ese dado está bloqueado!");
+    }
+    
+    public void turnoJugador(JTextArea text, Jugador jugador){
+        text.setText("Le jugar a " + jugador.getNombre());
+    }
+    
+    public void mostrarDado(JTextArea text){
+        text.setText("");
+    }
 }
