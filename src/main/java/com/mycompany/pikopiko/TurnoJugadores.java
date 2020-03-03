@@ -15,14 +15,15 @@ import java.util.Random;
 public class TurnoJugadores {
 
     // Atributos de clase de TurnoJugadores
-    private ArrayList<Jugador> lista;
-    private int turno;
+    private ArrayList<Jugador> lista; // Guardaremos el nombre de los jugadores en una lista
+    private int turno; // Indicaremos el turno de los jugadores
 
-    //Constructor con la lista
+    //Constructor parametrizado con la lista
     public TurnoJugadores(ArrayList<Jugador> lista) {
         this.lista = lista;
-        // Empieza el turno de la ronda de fomra random
+        // Empieza el turno de fomra random
         Random alt = new Random();
+        // Le indicamos a turno que se inicie de forma aleatoria con el tamaño de la lista
         this.turno = alt.nextInt(lista.size());
     }
 
@@ -30,8 +31,9 @@ public class TurnoJugadores {
     public int getTurnoJugador() {
         return this.turno;
     }
-
-    public Jugador getJugadorTurno() {
+    
+    // getJugadorTurno: para saber a que jugador le toca
+    public Jugador getJugadorT() {
         return this.lista.get(turno);
     }
  
@@ -56,16 +58,17 @@ public class TurnoJugadores {
 //        return lista2;
 //    }
 
-    // Método pasarSiguiente
+    // Método pasarSiguiente: que indica a que jugador le toca
     public int pasarSiguiente() {
         return this.turno = (this.turno == lista.size()-1)? 0: (turno+1);
     }
-
+    
+    //toString para probar que todo funcione
     @Override
     public String toString() {
         return "TurnoJugadores{" + "jugador=" + lista + ", turno=" + turno + '}';
     }
-
+//    MAIN PARA PORBAR LA CLASE
 //    public static void main(String[] args) {
 //        ArrayList<Jugador> j = new ArrayList<>();
 //        j.add(new Jugador("Jose"));
@@ -78,8 +81,11 @@ public class TurnoJugadores {
 //        TurnoJugadores n = new TurnoJugadores(j);
 //        System.out.println(n.getTurnoJugador());
 //        n.pasarSiguiente();
+//        n.getJugadorTurno().tirarDados();
 //        System.out.println(n.getTurnoJugador());
 //        n.pasarSiguiente();
+//        n.getJugadorTurno().tirarDados();
+//        
 //        System.out.println(n.getTurnoJugador());
 //        n.pasarSiguiente();
 //        System.out.println(n.getTurnoJugador());
