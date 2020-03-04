@@ -29,11 +29,15 @@ public class Mensajes {
         text.setText("¡Ese dado está bloqueado!");
     }
     
-    public void turnoJugador(JTextArea text, Jugador jugador){
-        text.setText("Le jugar a " + jugador.getNombre());
+    public void turnoJugador(JTextArea text, TurnoJugadores jugador){
+        text.setText("Le jugar a " + jugador.getJugadorT());
     }
     
     public void mostrarDado(JTextArea text){
         text.setText("");
+    }
+    
+    public void resultadoDado(){
+        
     }
 }
