@@ -28,7 +28,7 @@ public class VentanaJuego extends javax.swing.JFrame {
     private JLabel[] fichas;
     private JToggleButton[] dados;
     private TurnoJugadores turno;
-    
+
     private Mensajes m = new Mensajes();
 
     public VentanaJuego(ArrayList<Jugador> listaJugadores) {
@@ -57,7 +57,7 @@ public class VentanaJuego extends javax.swing.JFrame {
             image = new ImageIcon("res/dado.gif");
             dados[i].setIcon(image);
         }
-        
+
     }
 
     /**
@@ -303,6 +303,11 @@ public class VentanaJuego extends javax.swing.JFrame {
 
     private void dado1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dado1ActionPerformed
         // TODO add your handling code here:
+//        for (int i = 0; i < dados.length; i++) {
+//            String da = "res/dadog1.png";
+//            image = new ImageIcon(da);
+//            dados[0].setIcon(image);
+//        }
     }//GEN-LAST:event_dado1ActionPerformed
 
     private void dado2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dado2ActionPerformed
@@ -348,7 +353,6 @@ public class VentanaJuego extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonBloq;
