@@ -10,6 +10,7 @@ import java.awt.Toolkit;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JTextArea;
 import javax.swing.JToggleButton;
 
 /**
@@ -29,12 +30,11 @@ public class VentanaJuego extends javax.swing.JFrame {
     private JToggleButton[] dados;
     private TurnoJugadores turno;
 
-    private Mensajes m = new Mensajes();
-
     public VentanaJuego(ArrayList<Jugador> listaJugadores) {
         // iniciamos la lista
         this.turno = new TurnoJugadores(listaJugadores);
         initComponents();
+        
         this.setBounds((height / 2), (width / 2), 1100, 700);
         setLocationRelativeTo(null);
         this.setResizable(false);
@@ -388,4 +388,13 @@ public class VentanaJuego extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextArea textArea;
     // End of variables declaration//GEN-END:variables
+
+    public JTextArea getTextArea() {
+        return textArea;
+    }
+
+    public void setTextArea(JTextArea textArea) {
+        this.textArea = textArea;
+    }
+
 }

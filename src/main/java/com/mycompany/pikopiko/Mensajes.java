@@ -22,7 +22,7 @@ public class Mensajes {
     
     //Método hola
     public void hola(JTextArea text){
-        texto.setText("¡Bienvenido al Piko Piko!");
+        text.setText("¡Bienvenido al Piko Piko!");
     }
     
     public void dadoBloqueado(JTextArea text){

@@ -25,7 +25,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
     int height = pantalla.height;
     int width = pantalla.width;
-
+    private Mensajes m = new Mensajes();
+    
     public VentanaPrincipal() {
         initComponents();
         this.setBounds((height/2), (width/2), 600, 500);
@@ -132,7 +133,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             System.out.println(listaJugadores.get(i).getNombre());
         }
         VentanaJuego juego = new VentanaJuego(listaJugadores);
-        juego.setVisible(true);
+        m.hola(juego.getTextArea());
+        juego.setVisible(true);   
     }//GEN-LAST:event_jugarActionPerformed
 
     private void jugarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jugarMouseEntered
