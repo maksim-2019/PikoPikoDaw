@@ -33,11 +33,17 @@ public class Mensajes {
         text.setText("Le jugar a " + jugador.getJugadorT());
     }
     
-    public void mostrarDado(JTextArea text){
-        text.setText("");
+    public void mostrarDado(JTextArea text, TurnoJugadores jugador){
+        for (int i = 0; i < jugador.getJugadorT().getArrayDado().length; i++) {
+            text.setText("Dado "+(i+1)+": "+ jugador.getJugadorT().getArrayDado()[i].valorTirada());
+        }
     }
     
-    public void resultadoDado(){
-        
+    public void resultadoDado(JTextArea text, TurnoJugadores jugador){
+        int suma = 0;
+        for (int i = 0; i < jugador.getJugadorT().getArrayDado().length; i++){
+            suma += jugador.getJugadorT().getArrayDado()[i].valorTirada();
+        }
+        text.setText("Tu puntuación total es: " + suma);
     }
 }
