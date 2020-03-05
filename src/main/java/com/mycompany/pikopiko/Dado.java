@@ -42,6 +42,10 @@ public class Dado {
     public int valorTirada() {
         return arrayDado[caraSeleccionada].getValor();
     }
+    
+    public int valorNumCara(){
+        return arrayDado[caraSeleccionada].getNumCara();
+    }
 
     // consigue la imagen del dado
     public ImageIcon imagenDado() {

@@ -29,6 +29,7 @@ public class VentanaJuego extends javax.swing.JFrame {
     private JLabel[] fichas;
     private JToggleButton[] dados;
     private TurnoJugadores turno;
+    private String[] dadog = new String[]{"res/dadog1.png","res/dadog2.png","res/dadog3.png","res/dadog4.png","res/dadog5.png","res/dadog6.png"};
 
     public VentanaJuego(ArrayList<Jugador> listaJugadores) {
         // iniciamos la lista
@@ -308,6 +309,8 @@ public class VentanaJuego extends javax.swing.JFrame {
 //            image = new ImageIcon(da);
 //            dados[0].setIcon(image);
 //        }
+          image = new ImageIcon(dadog[turno.getJugadorT().getArrayDado()[0].valorNumCara()-1]);
+          dados[0].setIcon(image);
     }//GEN-LAST:event_dado1ActionPerformed
 
     private void dado2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dado2ActionPerformed
