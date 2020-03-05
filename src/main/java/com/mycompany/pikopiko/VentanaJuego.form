@@ -263,11 +263,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Tirar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TirarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="BotonBloq">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Bloquear"/>
+        <Property name="text" type="java.lang.String" value="Seleccionar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBloqActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Robar">
       <Properties>

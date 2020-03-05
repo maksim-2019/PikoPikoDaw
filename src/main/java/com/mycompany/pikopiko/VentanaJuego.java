@@ -160,8 +160,18 @@ public class VentanaJuego extends javax.swing.JFrame {
         jScrollPane1.setViewportView(textArea);
 
         Tirar.setText("Tirar");
+        Tirar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TirarActionPerformed(evt);
+            }
+        });
 
-        BotonBloq.setText("Bloquear");
+        BotonBloq.setText("Seleccionar");
+        BotonBloq.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonBloqActionPerformed(evt);
+            }
+        });
 
         Robar.setText("Robar");
 
@@ -322,6 +332,18 @@ public class VentanaJuego extends javax.swing.JFrame {
     private void dado8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dado8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_dado8ActionPerformed
+
+    private void TirarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TirarActionPerformed
+        turno.getJugadorT().tirarDados();
+        for (int i = 0; i < dados.length; i++) {
+            image = new ImageIcon(turno.getJugadorT().getArrayDado()[i].imagenDado().getImage());
+            dados[i].setIcon(image);
+        }
+    }//GEN-LAST:event_TirarActionPerformed
+
+    private void BotonBloqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBloqActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BotonBloqActionPerformed
 
     /**
      * @param args the command line arguments

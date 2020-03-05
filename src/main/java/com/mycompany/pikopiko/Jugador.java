@@ -53,6 +53,10 @@ public class Jugador {
         return puntosAcumulados;
     }
 
+    public Dado[] getArrayDado() {
+        return arrayDado;
+    }
+
     @Override
     public String toString() {
         return "Jugador = " + nombre;
